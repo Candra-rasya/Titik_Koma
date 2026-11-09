@@ -11,17 +11,17 @@ export default function Hero() {
       {/* Edit background di sini, sama seperti Backdrop Ghost Wave */}
       <Backdrop
         color="#22D3EE"
-        colorTwo="#0E7490"
+        colorTwo="#13F087"
         motion="pulse"
         ringCount={6}
         speed={1}
-        lineThickness={2}
-        glow={1.2}
+        lineThickness={10}
+        glow={2.2}
         baseRadius={0.38}
         radiusStep={0.1}
         expansion={0.1}
         taper={1.5}
-        spin={0.1}
+        spin={0.50}
         hoverScale={1.2}
         hoverIntensity={1}
         parallax={0.05}
