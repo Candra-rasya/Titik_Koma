@@ -42,7 +42,34 @@ export default function Hero() {
 
       <Navbar />
 
-      
+      <svg width="0" height="0" style={{position: 'absolute'}} aria-hidden="true" focusable="false">
+        <defs>
+          <filter
+            id="glass-title-inner"
+            x="-5%"
+            y="-5%"
+            width="110%"
+            height="110%"
+            colorInterpolationFilters="sRGB"
+          >
+            <feComponentTransfer in="SourceAlpha" result="alpha">
+              <feFuncA type="table" tableValues="1 0" />
+            </feComponentTransfer>
+
+            <feOffset in="inverted" dx="3" dy="4" result="shifted" />
+            <feGaussianBlur in="shifted" stdDeviation="18" result="blurred" />
+            <feFlood floodColor="#00161A" floodOpacity="0.9" result="shadowColor" />
+            <feComposite in="shadowColor" in2="blurred" operator="in" result="shadow" />
+            <feComposite in="shadow" in2="SourceAlpha" operator="in" result="innerShadow" />
+
+            <feMerge>
+              <feMergeNode in="SourceGraphic" />
+              <feMergeNode in="innerShadow" />
+            </feMerge>
+
+          </filter>
+          </defs>
+      </svg>
 
       <div className="hero__content">
         <p className="hero__eyebrow">DIGITAL STUDIO · BALI</p>
