@@ -34,12 +34,55 @@
 }
 
 .hero__title {
+  position: relative;
   margin: 0;
-  font-size: 400px;
-  font-weight: 800;
+  font-family: 'Inter Static', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 300px;
   line-height: 1.05;
   letter-spacing: -0.01em;
   white-space: nowrap;
+
+  filter: drop-shadow(0 0 18px rgba(3, 173, 186, 0.18));
+}
+
+.hero__title-layer {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero__semi {
+  font-family: 'Agency FB', 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.7em;
+}
+
+.hero__title-layer--fill {
+  background: 
+  linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 62%,
+    rgba(255, 255, 255, 0.22) 72%,
+    rgba(255, 255, 255, 0) 82%
+    ),
+  linear-gradient(90deg, #03ADBA 22%, #13F087 43%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  opacity: 0.62;
+}
+
+.hero__title-layer--rim {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(190, 255, 235, 0.7);
+  
+  pointer-events: none;
 }
 
 .hero__subtitle {

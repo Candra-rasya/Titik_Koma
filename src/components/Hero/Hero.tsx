@@ -5,6 +5,13 @@ import './Hero.css';
 // true = background putih, false = background gelap
 const LIGHT = true;
 
+function TitleText({ className}: { className: string }) {
+  return (
+    <span className={`hero__title-layer ${className}`} aria-hidden="true">
+      TITIK KOMA <span className="hero__semi">;</span>
+    </span>
+  );
+}
 export default function Hero() {
   return (
     <section className={`hero${LIGHT ? ' hero--light' : ''}`}>
@@ -35,10 +42,15 @@ export default function Hero() {
 
       <Navbar />
 
+      
+
       <div className="hero__content">
         <p className="hero__eyebrow">DIGITAL STUDIO · BALI</p>
 
-        <h1 className="hero__title">TITIK KOMA ;</h1>
+        <h1 className="hero__title" aria-label="TITIK KOMA ;">
+          <TitleText className="hero__title-layer--fill" />
+          <TitleText className="hero__title-layer--rim" />
+        </h1>
 
         <h2 className="hero__subtitle">
           Solusi Digital Terintegrasi untuk Skala Bisnis &amp; Kebutuhan Akademik.

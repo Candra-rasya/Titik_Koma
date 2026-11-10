@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@300;400;500;600&display=swap');
 
+@font-face {
+  font-family: 'Agency FB';
+  src: url('/fonts/AgencyFB-Bold.woff2') format('woff2'),
+       url('/fonts/AgencyFB-Bold.woff') format('woff');
+       font-weight: 400;
+       font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Static';
+  src: url ('/fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -19,3 +35,4 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
