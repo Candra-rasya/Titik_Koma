@@ -29,7 +29,7 @@ export default function Hero() {
         clickBurst
         intro
         vignette={LIGHT ? 0 : 0.35}
-        background={LIGHT ? '#ffffff' : '#121018'}
+        background={LIGHT ? '#070707' : '#121018'}
         theme={LIGHT ? 'light' : 'dark'}
       />
 
