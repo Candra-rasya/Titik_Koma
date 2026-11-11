@@ -1,4 +1,4 @@
-import Backdrop from '../Backdrop/Backdrop';
+import GradientWaves from '../GradientWaves/GradientWaves';
 import Navbar from '../Navbar/Navbar';
 import './Hero.css';
 

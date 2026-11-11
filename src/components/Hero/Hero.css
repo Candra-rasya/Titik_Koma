@@ -189,3 +189,10 @@
     border-color: rgba(15, 17, 21, 0.1);
   }
 }
+
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
