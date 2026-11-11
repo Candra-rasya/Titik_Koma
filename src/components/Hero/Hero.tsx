@@ -1,6 +1,8 @@
+import {useEffect, useRef, useState} from 'react';
 import GradientWaves from '../GradientWaves/GradientWaves';
 import Navbar from '../Navbar/Navbar';
 import './Hero.css';
+
 
 // true = background putih, false = background gelap
 const LIGHT = true;
@@ -13,11 +15,22 @@ function TitleText({ className}: { className: string }) {
   );
 }
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const [heroVisible, setHeroVisible] = useState(true);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => setHeroVisible(entry.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  
   return (
-    <section className={`hero${LIGHT ? ' hero--light' : ''}`}>
+    <section ref={heroRef} className={`hero${LIGHT ? ' hero--light' : ''}`}>
       {/* Edit background di sini, sama seperti Backdrop Ghost Wave */}
       <div className="hero__background">
-  <GradientWaves
+  <GradientWaves paused={!heroVisible}
     horizonColor="#1e3a8a"
     waveColor="#38bdf8"
     crestColor="#e0f2fe"
@@ -37,8 +50,9 @@ export default function Hero() {
     fogDepth={14}
     brightness={1.05}
     grain={0.11}
-    quality="high"
+    quality="low"
     mouseStrength={0.8}
+    
   />
 </div>
 
@@ -76,7 +90,7 @@ export default function Hero() {
       <div className="hero__content">
         <p className="hero__eyebrow">DIGITAL STUDIO · BALI</p>
 
-        <h1 className="hero__title" aria-label="titik koma ;">
+        <h1 className="hero__title" aria-label="TITIK KOMA ;">
           <TitleText className="hero__title-layer--fill" />
           <TitleText className="hero__title-layer--rim" />
         </h1>
