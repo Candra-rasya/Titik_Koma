@@ -16,29 +16,31 @@ export default function Hero() {
   return (
     <section className={`hero${LIGHT ? ' hero--light' : ''}`}>
       {/* Edit background di sini, sama seperti Backdrop Ghost Wave */}
-      <Backdrop
-        color="#22D3EE"
-        colorTwo="#13F087"
-        motion="pulse"
-        ringCount={6}
-        speed={1}
-        lineThickness={10}
-        glow={2.2}
-        baseRadius={0.38}
-        radiusStep={0.1}
-        expansion={0.1}
-        taper={1.5}
-        spin={0.50}
-        hoverScale={1.2}
-        hoverIntensity={1}
-        parallax={0.05}
-        followMouse={false}
-        clickBurst
-        intro
-        vignette={LIGHT ? 0 : 0.35}
-        background={LIGHT ? '#070707' : '#121018'}
-        theme={LIGHT ? 'light' : 'dark'}
-      />
+      <div className="hero__background">
+  <GradientWaves
+    horizonColor="#1e3a8a"
+    waveColor="#38bdf8"
+    crestColor="#e0f2fe"
+    backgroundColor="#050B1F"
+    speed={0.27}
+    amplitude={1.4}
+    relief={1}
+    lightAngle={87}
+    mouseInteraction
+    swellOnClick
+    waveScale={0.98}
+    waveRatio={0.79}
+    swell={27}
+    turbulence={27}
+    zoom={0.92}
+    height={4}
+    fogDepth={14}
+    brightness={1.05}
+    grain={0.11}
+    quality="high"
+    mouseStrength={0.8}
+  />
+</div>
 
       <Navbar />
 
@@ -52,7 +54,7 @@ export default function Hero() {
             height="110%"
             colorInterpolationFilters="sRGB"
           >
-            <feComponentTransfer in="SourceAlpha" result="alpha">
+            <feComponentTransfer in="SourceAlpha" result="inverted">
               <feFuncA type="table" tableValues="1 0" />
             </feComponentTransfer>
 

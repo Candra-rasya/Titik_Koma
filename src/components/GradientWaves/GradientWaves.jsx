@@ -1,0 +1,26 @@
+import GradientWaves from './GradientWaves';
+
+<div style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <GradientWaves
+    horizonColor="#1e3a8a"
+    waveColor="#38bdf8"
+    crestColor="#e0f2fe"
+    speed={0.27}
+    amplitude={1.4}
+    relief={1}
+    lightAngle={87}
+    mouseInteraction
+    swellOnClick
+    waveScale={0.98}
+    waveRatio={0.79}
+    swell={27}
+    turbulence={27}
+    zoom={0.92}
+    height={4}
+    fogDepth={14}
+    brightness={1.05}
+    grain={0.11}
+    quality="high"
+    mouseStrength={0.8}
+/>
+</div>
