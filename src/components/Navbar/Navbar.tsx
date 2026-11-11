@@ -11,8 +11,9 @@ export default function Navbar() {
       <a href="#" className="navbar__logo" aria-label="Titik Koma">
         ;
       </a>
-
-      <nav
+    
+    <div className="navbar__pill">
+      <nav 
         id="navbar-menu"
         className={`navbar__menu${open ? ' navbar__menu--open' : ''}`}
         aria-label="Navigasi utama"
@@ -35,6 +36,7 @@ export default function Navbar() {
         <span />
         <span />
       </button>
+      </div>
     </header>
   );
 }

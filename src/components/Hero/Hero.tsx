@@ -76,11 +76,12 @@ export default function Hero() {
       <div className="hero__content">
         <p className="hero__eyebrow">DIGITAL STUDIO · BALI</p>
 
-        <h1 className="hero__title" aria-label="TITIK KOMA ;">
+        <h1 className="hero__title" aria-label="titik koma ;">
           <TitleText className="hero__title-layer--fill" />
           <TitleText className="hero__title-layer--rim" />
         </h1>
 
+      <div className="hero__below">
         <h2 className="hero__subtitle">
           Solusi Digital Terintegrasi untuk Skala Bisnis &amp; Kebutuhan Akademik.
         </h2>
@@ -98,6 +99,7 @@ export default function Hero() {
           <a href="#" className="btn btn--cyan">
             CTA
           </a>
+          </div>
         </div>
       </div>
     </section>
